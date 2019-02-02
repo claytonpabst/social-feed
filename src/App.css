@@ -23,8 +23,9 @@
 }
 
 .post-wrapper {
-  margin: 0 auto;
-  width: 200px;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 320px;
   border: 1px solid #444;
 }
 

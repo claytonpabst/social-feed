@@ -13,9 +13,9 @@ class App extends Component {
           content:"So.... I got a new dog and he's teaching me how to workout."
         },
       ],
-      titleInput:"",
-      imgInput:"",
-      contentInput:""
+      titleInput:"Test Title",
+      imgInput:"https://thenypost.files.wordpress.com/2018/05/180516-woman-mauled-by-angry-wiener-dogs-feature.jpg?quality=90&strip=all&w=618&h=410&crop=1",
+      contentInput:"Test Content"
     }
   }
 
@@ -61,11 +61,12 @@ class App extends Component {
 
     return (
       <div className="App">
-        <input placeholder="title" onChange={(e) => this.handleTitleChange(e)}/>
-        <input placeholder="image src" onChange={(e) => this.handleImgChange(e)}/>
-        <input placeholder="content" onChange={(e) => this.handleContentChange(e)}/>
+        <input placeholder="title" onChange={(e) => this.handleTitleChange(e)} value={this.state.titleInput}/>
+        <input placeholder="image src" onChange={(e) => this.handleImgChange(e)} value={this.state.imgInput}/>
+        <input placeholder="content" onChange={(e) => this.handleContentChange(e)} value={this.state.contentInput}/>
         <button onClick={this.createPost}>Create Post</button>
         <MainHeader />
+        {/* The variable below, 'posts', is coming from the const above, which is getting it's value from a .map function, which is returning some JSX*/}
         {posts}
       </div>
     );
